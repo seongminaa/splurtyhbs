@@ -1,16 +1,28 @@
-<div class="advice">
+<div class="header">
 
-	<h1> The best life tips...</h1>
+	<h1> Time-Lord's wisdom </h1>
 	<h2>
 		"
-		<%= @quote.saying %>
+		 <%= @quote.saying %> 
 		"
 	</h2>
 		
 	<p>
 		<%= @quote.author %><br><br>	
-		<%= link_to 'Update Quote', quotes_path, :class => 'btn btn-primary' %>
-		<%= link_to 'Contribute Your Own', new_quote_path, :class => 'btn btn-primary' %>
+		<%= link_to 'Give me more wisdom', quotes_path, :class => 'btn btn-primary' %>
+		<%= link_to 'Contribute Your Own Wisdom', new_quote_path, :class => 'btn btn-primary' %>
+		<br> <br><br>
+		
+				Sign up if you want to get a daily update <br> 
+		
+
+
+		<%= simple_form_for @email do |f| %>
+		<%= f.input :name %>
+		<%= f.input :address %>
+		<%= f.button :submit, :class => 'btn btn-primary' %>
+		<% end %>
+	
 
 	</p>
 </div>

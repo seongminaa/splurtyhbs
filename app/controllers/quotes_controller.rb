@@ -2,9 +2,10 @@ class QuotesController < ApplicationController
 
 	def index
 		@quote = Quote.order("RANDOM()").last
-		
+		@email = Email.new
 	end
 
+	
 	def new
 		@quote = Quote.new
 	end
@@ -13,6 +14,8 @@ class QuotesController < ApplicationController
 		Quote.create(quote_params) 
 		redirect_to quotes_path
 	end
+
+
 
 	private
 
