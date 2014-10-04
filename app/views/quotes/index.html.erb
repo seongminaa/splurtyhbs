@@ -8,6 +8,9 @@
 	</h2>
 		
 	<p>
-		<%= @quote.author %>
+		<%= @quote.author %><br><br>	
+		<%= link_to 'Update Quote', quotes_path, :class => 'btn btn-primary' %>
+		<%= link_to 'Contribute Your Own', new_quote_path, :class => 'btn btn-primary' %>
+
 	</p>
 </div>
