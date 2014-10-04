@@ -2,6 +2,6 @@
 	<%= simple_form_for @quote do |f| %>
 	  <%= f.input :saying %>
 	  <%= f.input :author %>
-	  <%= f.button :submit %>
+	  <%= link_to 'Submit', quotes_path, :class => 'btn btn-primary' %>
 	<% end %>
 </div>
